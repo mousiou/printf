@@ -1,51 +1,34 @@
-# printf
-# Description
-In C programming language, printf() function is used to print the “character, string, float, integer, octal and hexadecimal values” onto the output screen.
+Certainly, you can rephrase the project description in a GitHub-friendly format as follows:
 
-The available convertion specifiers are:
+**Project Title:** printf Project
 
-%c: Prints a single character.
-%s: Prints a string of characters.
-%d: Prints integers.
-%i: Prints integers.
-%b: Prints the binary representation of an unsigned decimal.
-%u: Prints unsigned integers
-%p: Prints address of pointer
-%x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
-%X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
-%r: Prints a reversed string
-%R: Prints the Rot13 interpretation of a string
-Usage
-All the files are to be compiled on Ubuntu 14.04 LTS
-Compile your code with gcc -Wall -Werror -Wextra -pedantic *.c
-Include the "main.h" header file on the functions using the _printf()
-Create a file (main.c) with below contend
-Example
-#include "main.h"
-#include <stdio.h>
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
+**Description:**
+This team project is a part of the first-year curriculum at ALX. The goal is to create a custom implementation of the `printf()` function from the C standard library.
 
-int main(void)
-{
-	int a;
-	int b;
-	char *str;
+**Learning Objectives:**
+- Learn how to use Git in a team setting.
+- Apply variadic functions to a substantial project.
+- Understand the complexities of the `printf` function.
+- Manage a large number of files and establish an effective workflow.
 
-	str = "school";
-	a = _printf("%r\n", "hello"); /*expected: notrebloh*/
-	printf("--->%d\n", a); /*expected: 10*/
+**Prototype:**
+```c
+int _printf(const char *format, ...);
+```
 
-	b = _printf("%r\n", str); /*expected: loohcs*/
-	printf("%d\n", b); /*expected: 7*/
+**Usage:**
+- The `_printf` function is designed to print a formatted string to the standard output.
+- It should return the number of characters in the output string on success and -1 in case of an error.
+- Call the function using the following format:
+  ```c
+  _printf("format string", arguments...);
+  ```
+  where the format string can contain conversion specifiers, flags, and regular characters.
 
-	b = _printf("%r\n", str); /*expected: loohcs*/
-	printf("%d\n", b); /*expected: 7*/
-	return (0);
-}
+**Examples:**
+- `_printf("Hello, main\n")` prints "Hello, Main", followed by a new line.
+- `_printf("%s", "Hello")` prints "Hello".
+- `_printf("This is a number: %d", 98)` prints "This is a number: 98".
 
-# Authors:
-Abel Berhanu and Robel Amede
+**Note:**
+- All source files were created and compiled on Ubuntu 14.04.4 LTS using GCC 4.8.4 with the command `gcc -Wall -Werror -Wextra -pedantic *.c`.
